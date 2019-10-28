@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 
 Route::get('/{msg_key}',function($msg_key) {
-    $message = Cache::get($msg_key);
+    $message = Cache::pull($msg_key);
    return view('edit')->with('msg_key',$msg_key)
             ->with('message', $message ?? '');
 });
