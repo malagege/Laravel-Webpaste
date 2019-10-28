@@ -40,3 +40,12 @@ Route::post('/{msg_key}',function($msg_key) {
         ->with('message',$message)
         ->with('success','儲存成功');
  });
+
+// 沒有使用到
+//  Route::get('/qrcode/qr-code-g', function () {
+//     QrCode::size(500)
+//               ->format('png')
+//               ->generate('ItSolutionStuff.com', public_path('images/qrcode.png'));
+  
+//     return view('qrCode');
+//  });
